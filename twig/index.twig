@@ -4,7 +4,7 @@
         <div class="w08">
             <div class="mission-wall">
             {% for item in mission_list %}
-                <div class="item tg-wrap item{{ loop.index }}">
+                <div class="item tg-wrap item{{ loop.index }} {% if item.quota < 1 or item.done %}off{% endif %}">
                     <div class="item-inner r1020">
                         <div class="item-main row">
                             <div class="col-12 node-mobile" data-child="dyn-title{{ loop.index }}">
@@ -12,25 +12,32 @@
                                     <h3 class="title fs1820 c0">{{ item.title }}</h3>
                                 </div>
                             </div>
-                            <div class="figure">
+                            <a class="figure" href="{{ item.url }}" title="{{ item.titlle }}">
                                 <img class="r1020" src="{{ item.src }}" width="140" height="140" alt="{{ item.titlle }}" loading="lazy">
-                            </div>
+                            </a>
                             <div class="text">
                                 <div class="node-pc" data-child="dyn-title{{ loop.index }}"></div>
                                 <div class="desc fs1416">{{ item.desc }}</div>
                                 <div class="btn-wrap row fjcsb faic">
-                                    <a class="btn btn02 fw7" href="{{ item.url }}" title="點我前往完成任務">點我前往完成任務</a>
-                                    <div class="node-pc" data-child="dyn-quota{{ loop.index }}"></div>
+                                    {% if item.done %}
+                                        <a class="btn btn02 fw7 off" href="{{ item.url }}" title="您已完成此任務">您已完成此任務</a>
+                                    {% else %}
+                                        <a class="btn btn02 fw7" href="{{ item.url }}" title="點我前往完成任務">點我前往完成任務</a>
+                                    {% endif %}
+                                    {% if item.show_quota %}
+                                        <div class="node-pc" data-child="dyn-quota{{ loop.index }}"></div>
+                                    {% endif %}
                                     <div class="node-pc" data-child="dyn-step{{ loop.index }}"></div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="node-mobile" data-child="dyn-quota{{ loop.index }}">
-                            <div class="dyn-node btn-item btn03" data-node="dyn-quota{{ loop.index }}">
-                                今日剩餘 <strong class="fs18 color2">{{ item.quota }}</strong> 名額
+                        {% if item.show_quota %}
+                            <div class="node-mobile" data-child="dyn-quota{{ loop.index }}">
+                                <div class="dyn-node btn-item btn03" data-node="dyn-quota{{ loop.index }}">
+                                    今日剩餘 <strong class="fs18 color2">{{ item.quota }}</strong> 名額
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
                         <div class="tg-content col-12">
                             <div class="list list01 row fjcc">
                                 <ol class="fs1416 fw3">

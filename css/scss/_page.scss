@@ -11,11 +11,27 @@
 
 //廣告任務牆 index
 .mission-wall{
-    .item{padding: 0 0 30px;}
-    .item-inner{box-shadow: 0 0 5px rgba(#000,.1);}
+    .item{
+        padding: 0 0 30px;
+        &.off{
+            opacity: .7;
+            a{pointer-events: none;}
+        }
+    }
+    .item-inner{
+        box-shadow: 0 0 5px rgba(#000,.1);
+        position: relative;
+        &.off:before{
+            @include fake-b(101%,101%);
+            background: rgba(#fff,.5);
+            @include abs();
+            z-index: 4;
+            
+        }
+    }
     .node-mobile{width: 100%;}
     .title{padding: 0 0 10px;}
-    .item-main{padding: 25px 20px 20px 25px;}
+    .item-main{padding: 20px 20px 20px 25px;}
     .figure{
         width: 80px;
         height: auto;
@@ -46,7 +62,23 @@
 }
 .miission-clik{
     img{width: 100%;}
+    .figure a{
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    .off{
+        pointer-events: none;
+        &::before{
+            @include fake-b(101%,101%);
+            background: rgba(#555,.7);
+            @include abs();
+        }
+    }
 }
+
+//看文章 mission-article
+.mission-article{background: #fff;}
 
 //倒數提示 mission-video, mission-article
 .prompt{

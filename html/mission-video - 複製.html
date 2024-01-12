@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>任務中(看廣告) - Hami Point</title>
+    <title> - </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">    
@@ -21,22 +21,16 @@
             <a id="logo" class="fs1820 fw7 c5" href="index.html" title="廣告任務牆">廣告任務牆</a>
             
             
-                <div class="light-signal row">
-                    <!-- 黃燈加class="on" -->
-                    <div class="circle on"></div>
-                    <div class="circle "></div>
-                </div>
-            
         </div>
     </header>
     <main id="content">
         
     <div class="mission-video pd1 sy1">
         <div class="w08 r1020 pd1 sy2 my3">
-            <h1 class="tc fs1820 fw5 c0 sb05">點擊兩則廣告後，右上角兩黃燈亮起可領取點數。</h1>
+            <h1 class="tc fs1820 fw5 c0 sb05"></h1>
             <div class="row fjcc faic tc sb1 mt1 mb2">
                 <span>今日剩餘&nbsp;&nbsp;</span>
-                <strong class="fs30 color2">10</strong>
+                <strong class="fs30 color2"></strong>
                 <span>&nbsp;&nbsp;名額</span>
             </div>
             <div class="miission-clik r1020 w04">
@@ -45,41 +39,21 @@
                         <div class="row fjcc faic">
                             <div>等倒數結束方可點擊廣告：</div>
                             <div class="row fjcc faic">
-                                剩餘<strong class="timer fs24">5</strong>秒
+                                剩餘<strong class="timer fs24">3</strong>秒
                             </div>
                         </div>
                     </div>
                     <div class="fs1820">請點擊下方有興趣廣告</div>
                 </div>
                 <div class="figure">
-                    <a class="off" href="mission-video-ok.html" title="廣告名稱">
-                        <img src="https://ad.newaddiscover.com/ad/images//29dffddc90ba2eebb4f089478e562c17.jpg" alt="廣告名稱" loading="lazy">
+                    <a href="" title="">
+                        <img src="" alt="" loading="lazy">
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-        
-            <div class="ad-block pd1 sb3 lt1 lb5">
-                <div class="ig01 row w08">
-                    
-                        <div class="item col-12 col-md">
-                            <div class="tr fs16">贊助商</div>
-                            <a class="figure" href="" title="贊助商名稱">
-                                <img src="../images/figure06.jpg" alt="" loading="lazy">
-                            </a>
-                        </div>
-                    
-                        <div class="item col-12 col-md">
-                            <div class="tr fs16">贊助商</div>
-                            <a class="figure" href="" title="贊助商名稱">
-                                <img src="../images/figure06.jpg" alt="" loading="lazy">
-                            </a>
-                        </div>
-                    
-                </div>
-            </div>
                 
     </main>
     <div id="gdpr">
@@ -130,40 +104,25 @@
 </script>
 
     <script>
-        function hideElement(element) {
-            element.style.display = 'none';
-
-            // 移除class="off"
-            var adLink = element.querySelector('.figure a.off');
-            if (adLink) {
-                adLink.classList.remove('off');
-            }
-        }
-
-        function removeOff() {
-            var adLink = document.querySelector('.miission-clik a.off');
-            if (adLink) {
-                adLink.classList.remove('off');
-            }
-        }
-
         function startCountdown(elementId) {
             var countdown = document.getElementById(elementId);
 
             var countdownInterval = setInterval(function () {
-                var timerElement = countdown.querySelector('.timer');
-                timerElement.textContent--;
+                countdown.querySelector('.timer').textContent--;
 
-                if (timerElement.textContent == 0) {
+                if (countdown.querySelector('.timer').textContent == 0) {
                     clearInterval(countdownInterval);
-                    hideElement(countdown);
-                    removeOff();
+                    hideElement(elementId);
                 }
             }, 1000);
         }
 
-        startCountdown('countdown');
+        function hideElement(elementId) {
+            document.getElementById(elementId).style.display = 'none';
+        }
 
+        // 啟動倒數計時器，參數為要顯示倒數的元素的 ID
+        startCountdown('countdown');
     </script>
 
 

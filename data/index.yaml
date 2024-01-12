@@ -1,6 +1,6 @@
-sitename: 廣告任務牆
+sitename: Hami Point
 
-sitetitle: '首頁'
+sitetitle: '廣告任務牆'
 
 header:
   back: 1
@@ -12,10 +12,11 @@ ad_block:
     url: ''
 
 mission_list:
-  - title: 觀看兩則廣告可得Hami point 1點
+  - title: 無任務列表-觀看兩則廣告可得Hami point 1點
     src: ../images/figure01.jpg
     desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
-    url: mission-list.html
+    url: mission-video.html
+    show_quota: 1
     quota: 10
     step: |
       點擊前往活動，輸入驗證碼進入活動
@@ -24,23 +25,40 @@ mission_list:
       等待5秒後點擊廣告頁面
       點擊網頁中的返回上頁按鈕回到活動
       點擊"點我取點”，獲得點數按“確認”
+      
+  - title: 當任務已完成-無任務列表-觀看兩則廣告可得Hami point 1點
+    src: ../images/figure01.jpg
+    desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
+    url: mission-video.html
+    show_quota: 1
+    quota: 9
+    step: |
+      點擊前往活動，輸入驗證碼進入活動
+      等待5秒後點擊廣告頁面
+      點擊網頁中的返回上頁按鈕回到活動
+      等待5秒後點擊廣告頁面
+      點擊網頁中的返回上頁按鈕回到活動
+      點擊"點我取點”，獲得點數按“確認”
+    done: 1
 
-  - title: 閱讀文章指定秒數後累計Hami point
+  - title: 有任務列表-閱讀文章指定秒數後累計Hami point
     src: ../images/figure02.jpg
     desc: 每天晚上12點更新任務名額
     url: mission-list.html
-    quota: 8
+    show_quota: 0
+    quota: 10
     step: |
       點擊前往活動，輸入驗證碼進入活動
       等待5秒後點擊廣告頁面
       點擊網頁中的返回上頁按鈕回到活動
       等待5秒後點擊廣告頁面
 
-  - title: 下載APP，註冊會員
+  - title: 無剩餘名額淡化+不可點擊-下載APP，註冊會員
     src: ../images/figure03.jpg
     desc: 下載APP並註冊會員後即可賺取點數
     url: mission-list.html
-    quota: 5
+    show_quota: 0
+    quota: 0
     step: |
       點擊網頁中的返回上頁按鈕回到活動
       等待5秒後點擊廣告頁面
@@ -49,7 +67,8 @@ mission_list:
     src: ../images/figure04.jpg
     desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
     url: mission-list.html
-    quota: 10
+    show_quota: 1
+    quota: 0
     step: |
       點擊前往活動，輸入驗證碼進入活動
       等待5秒後點擊廣告頁面
@@ -62,30 +81,6 @@ mission_list:
     src: ../images/figure05.jpg
     desc: 填寫問卷可得點，每日限量
     url: mission-list.html
-    quota: 7
     step: |
       點擊網頁中的返回上頁按鈕回到活動
       等待5秒後點擊廣告頁面
-
-  - title: 點我前往完成任務
-    src: ../images/figure01.jpg
-    desc: ''
-    url: mission-list.html
-    quota: 3
-    step: |
-      點擊前往活動，輸入驗證碼進入活動
-      等待5秒後點擊廣告頁面
-      點擊網頁中的返回上頁按鈕回到活動
-      等待5秒後點擊廣告頁面
-      點擊網頁中的返回上頁按鈕回到活動
-      點擊"點我取點”，獲得點數按“確認”
-
-  - title: 點擊兩則廣告後，右上角兩黃燈亮起可領取點數。
-    src: ../images/figure02.jpg
-    desc: ''
-    url: mission-list.html
-    quota: 11
-    step: |
-      點擊前往活動，輸入驗證碼進入活動
-      等待5秒後點擊廣告頁面
-

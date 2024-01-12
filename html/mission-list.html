@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>任務列表 - 廣告任務牆</title>
+    <title>任務列表 - Hami Point</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">    
@@ -66,6 +66,10 @@
                 <div class="btn-wrap">
                     <a class="btn02 fw7" href="#" title="點我取點">點我取點</a>
                 </div>
+                <!-- 任務未完成時加class:off -->
+                <div class="btn-wrap">
+                    <a class="btn02 fw7 off" href="#" title="點我取點(待完成任務)">點我取點(待完成任務)</a>
+                </div>
             </div>
             <div class="tb-wrap tb02 tb-js fw4 c5">
                 <table>
@@ -78,7 +82,8 @@
                     </thead>
                     <tbody>
                     
-                        <tr>
+                        <!-- 名額為0時加class:off -->
+                        <tr >
                             <td class="td-link">
                                 <div class="item row faic">
                                     <a class="figure" href="mission-video.html">
@@ -91,11 +96,14 @@
                                 <strong class="fs1820 color1">0.2</strong>點
                             </td>
                             <td class="td-quota">
-                                <strong class="fs1820 color2">80</strong>名
+                                
+                                    <strong class="fs1820 color2">80</strong>名
+                                
                             </td>
                         </tr>
                     
-                        <tr>
+                        <!-- 名額為0時加class:off -->
+                        <tr >
                             <td class="td-link">
                                 <div class="item row faic">
                                     <a class="figure" href="mission-article.html">
@@ -108,11 +116,14 @@
                                 <strong class="fs1820 color1">0.1</strong>點
                             </td>
                             <td class="td-quota">
-                                <strong class="fs1820 color2">50</strong>名
+                                
+                                    <strong class="fs1820 color2">5</strong>名
+                                
                             </td>
                         </tr>
                     
-                        <tr>
+                        <!-- 名額為0時加class:off -->
+                        <tr class="off">
                             <td class="td-link">
                                 <div class="item row faic">
                                     <a class="figure" href="mission-video.html">
@@ -125,11 +136,12 @@
                                 <strong class="fs1820 color1">0.2</strong>點
                             </td>
                             <td class="td-quota">
-                                <strong class="fs1820 color2">37</strong>名
+                                
                             </td>
                         </tr>
                     
-                        <tr>
+                        <!-- 名額為0時加class:off -->
+                        <tr >
                             <td class="td-link">
                                 <div class="item row faic">
                                     <a class="figure" href="mission-article.html">
@@ -142,7 +154,9 @@
                                 <strong class="fs1820 color1">0.1</strong>點
                             </td>
                             <td class="td-quota">
-                                <strong class="fs1820 color2">5</strong>名
+                                
+                                    <strong class="fs1820 color2">37</strong>名
+                                
                             </td>
                         </tr>
                     

@@ -24,9 +24,9 @@
             {% endif %}
             {% if header.light_signal %}
                 <div class="light-signal row">
-                    {# 黃燈加class="on" #}
-                    <div class="circle on"></div>
-                    <div class="circle"></div>
+                    <!-- 黃燈加class="on" -->
+                    <div class="circle {% if header.ad_number >= 1 %}on{% endif %}"></div>
+                    <div class="circle {% if header.ad_number >= 2 %}on{% endif %}"></div>
                 </div>
             {% endif %}
         </div>

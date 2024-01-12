@@ -14,14 +14,14 @@
                         <div class="row fjcc faic">
                             <div>等倒數結束方可點擊廣告：</div>
                             <div class="row fjcc faic">
-                                剩餘<strong class="timer fs24">3</strong>秒
+                                剩餘<strong class="timer fs24">5</strong>秒
                             </div>
                         </div>
                     </div>
                     <div class="fs1820">請點擊下方有興趣廣告</div>
                 </div>
                 <div class="figure">
-                    <a href="{{ mission.url }}" title="{{ mission.name }}">
+                    <a class="off" href="mission-video-ok.html" title="{{ mission.name }}">
                         <img src="{{ mission.src }}" alt="{{ mission.name }}" loading="lazy">
                     </a>
                 </div>
@@ -31,24 +31,39 @@
 {% endblock %}
 {% block scripts_for_body %}
     <script>
+        function hideElement(element) {
+            element.style.display = 'none';
+
+            // 移除class="off"
+            var adLink = element.querySelector('.figure a.off');
+            if (adLink) {
+                adLink.classList.remove('off');
+            }
+        }
+
+        function removeOff() {
+            var adLink = document.querySelector('.miission-clik a.off');
+            if (adLink) {
+                adLink.classList.remove('off');
+            }
+        }
+
         function startCountdown(elementId) {
             var countdown = document.getElementById(elementId);
 
             var countdownInterval = setInterval(function () {
-                countdown.querySelector('.timer').textContent--;
+                var timerElement = countdown.querySelector('.timer');
+                timerElement.textContent--;
 
-                if (countdown.querySelector('.timer').textContent == 0) {
+                if (timerElement.textContent == 0) {
                     clearInterval(countdownInterval);
-                    hideElement(elementId);
+                    hideElement(countdown);
+                    removeOff();
                 }
             }, 1000);
         }
 
-        function hideElement(elementId) {
-            document.getElementById(elementId).style.display = 'none';
-        }
-
-        // 啟動倒數計時器，參數為要顯示倒數的元素的 ID
         startCountdown('countdown');
+
     </script>
 {% endblock %}

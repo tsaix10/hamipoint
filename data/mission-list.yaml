@@ -1,4 +1,4 @@
-sitename: 廣告任務牆
+sitename: Hami Point
 
 sitetitle: '任務列表'
 
@@ -24,7 +24,6 @@ mission:
     點擊網頁中的返回上頁按鈕回到活動
     點擊"點我取點”，獲得點數按“確認”
 
-
 mission_list:
   - title: 任務項目標題 任務項目標題 連結至看廣告
     src: ../images/figure01.jpg
@@ -35,14 +34,14 @@ mission_list:
     src: ../images/figure02.jpg
     url: mission-article.html
     point: 0.1
-    quota: 50
+    quota: 5
   - title: 任務項目標題 任務項目標題 連結至看廣告
     src: ../images/figure03.jpg
     url: mission-video.html
     point: 0.2
-    quota: 37
+    quota: 0
   - title: 任務項目標題 任務項目標題 連結至看文章
     src: ../images/figure04.jpg
     url: mission-article.html
     point: 0.1
-    quota: 5
+    quota: 37

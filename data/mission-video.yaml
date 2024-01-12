@@ -1,10 +1,11 @@
-sitename: 廣告任務牆
+sitename: Hami Point
 
-sitetitle: '看廣告'
+sitetitle: '任務中(看廣告)'
 
 header:
   back: 0
   light_signal: 1
+  ad_number: 1
 
 ad_block:
   - name: 贊助商名稱

@@ -17,6 +17,10 @@
                 <div class="btn-wrap">
                     <a class="btn02 fw7" href="#" title="點我取點">點我取點</a>
                 </div>
+                <!-- 任務未完成時加class:off -->
+                <div class="btn-wrap">
+                    <a class="btn02 fw7 off" href="#" title="點我取點(待完成任務)">點我取點(待完成任務)</a>
+                </div>
             </div>
             <div class="tb-wrap tb02 tb-js fw4 c5">
                 <table>
@@ -29,7 +33,8 @@
                     </thead>
                     <tbody>
                     {% for item in mission_list %}
-                        <tr>
+                        <!-- 名額為0時加class:off -->
+                        <tr {% if item.quota < 1 %}class="off"{% endif %}>
                             <td class="td-link">
                                 <div class="item row faic">
                                     <a class="figure" href="{{ item.url }}">
@@ -42,7 +47,9 @@
                                 <strong class="fs1820 color1">{{ item.point }}</strong>點
                             </td>
                             <td class="td-quota">
-                                <strong class="fs1820 color2">{{ item.quota }}</strong>名
+                                {% if item.quota > 1 %}
+                                    <strong class="fs1820 color2">{{ item.quota }}</strong>名
+                                {% endif %}
                             </td>
                         </tr>
                     {% endfor %}

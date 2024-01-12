@@ -7,6 +7,7 @@ $fontsize:(12,14,16,18,24,30);
 .fs1416{@include font(14,16);}
 .fs1618{@include font(16,18);}
 .fs1820{@include font(18,20);}
+.fs2530{@include font(25,30);}
 .lh1{line-height: 1;}
 .lh12{line-height: 1.2;}
 .lh16{line-height: 1.6;}
@@ -32,10 +33,12 @@ $fontsize:(12,14,16,18,24,30);
 .btn02{
     background: $color1;
     border-radius: 50px;
+    &.off{
+        pointer-events: none;
+        filter: saturate(0);
+    }
 }
-.btn03{
-    background: #f7f7f7;
-}
+.btn03{background: #f7f7f7;}
 .btn04{
     background: #999;
     &::after{
@@ -85,7 +88,7 @@ $fontsize:(12,14,16,18,24,30);
         border-radius: 10px;
         align-items: center;
         margin: 10px 0;
-        overflow: hidden;        
+        overflow: hidden;
     }
     .td-link{
         width: 100%;
@@ -105,6 +108,11 @@ $fontsize:(12,14,16,18,24,30);
     }
     .title{padding-left: 10px;}
     strong{line-height: 1;}
+    .off{
+        opacity: .6;
+        a{pointer-events: none;}
+        td{background: #ddd;}
+    }
 }
 
 //步驟說明
@@ -175,8 +183,8 @@ $fontsize:(12,14,16,18,24,30);
         &:hover{transform: scale(0.95);}
     }
     .tb02{
-        tr:hover{
-            td{background: #f7f7f7;}
+        tr:not(.off):hover{
+            td{background: #fbfbfb;}
         }
     }
 }
