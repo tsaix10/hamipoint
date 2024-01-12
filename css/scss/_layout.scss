@@ -1,0 +1,104 @@
+#container, #content{
+	position: relative;
+    margin:0 auto;
+    overflow-x: clip;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 320px;
+    height: 100%;
+}
+#content {
+    width: 100%;
+    flex: 1;
+    clear:both;
+    line-height: 1.5;
+}
+.header{
+    width:100%; min-width:320px;
+    padding: 30px 5%;
+    z-index:999;
+    transition: .3s;
+}
+#logo{
+    &, a{ display: block; }
+}
+.footer{
+    background: #555;
+    .w08>div{padding: 2px 0;}
+}
+#gdpr{
+    position: fixed;
+    left: 0; bottom: 0;
+    width: 100%;
+    padding: 15px 5%;
+    background: rgba(#000, .7);
+    z-index: 99;
+}
+.path {
+    padding: 10px 20px 0;
+    line-height: 1;
+    ul, li { list-style: none outside none; }
+    ul{padding: 0; margin: 0;}
+    li, a{
+        display:inline-block;
+        vertical-align:middle;
+    }
+    li{
+        padding:4px 0;
+        position: relative;
+        &:after{
+            content:'/';
+            color: #777;
+            margin-left: 5px;
+        }
+        &:last-child:after{display:none;}
+    }
+}
+.page-limit {
+    text-align:center;
+    line-height: 1;
+    ul, li { list-style: none outside none; }
+    ul{padding: 0; margin: 0;}
+    li {
+        display:inline-block;
+        vertical-align:middle;
+        padding:0 5px;
+    }
+   a{
+        display: block;
+        width:25px;
+        line-height:25px;
+        color: #888;
+        position: relative;
+    }
+    .on a{
+        background:#888;
+        color:#fff;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header{padding-top: 50px;}
+}
+
+//hover
+@media (hover: hover) {
+    .path{
+        padding: 15px 20px 0;
+        a:hover{
+           color: $color1;
+           text-decoration: underline;
+        }
+    }
+    .page-limit{
+        li:not(:is(.prev, .next)) a:hover {
+            background:#888;
+            color:#fff;  
+        }
+        .prev a:hover{transform: translateX(-5px);}
+        .next a:hover{transform: translateX(5px);}
+   }
+}

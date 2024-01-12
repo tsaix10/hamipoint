@@ -1,0 +1,93 @@
+//max-width: w01 ~ w16
+@for $i from 1 through 12 {
+    @if $i < 10 {
+        .w0#{$i} {
+            max-width: (100 * $i) + px;
+            margin:0 auto;
+        }
+    }
+    @else {
+        .w#{$i} {
+            max-width: (100 * $i) + px;
+            margin:0 auto;
+        }
+    }
+}
+
+//padding spacing
+$axis-x:20px;
+$axis-y:20px;
+
+.sx0{padding: 0;}
+.st05{padding-top: 10px;}
+.sb05{padding-bottom: 10px;}
+@for $i from 1 through 2 {
+    .sx#{$i} {
+        padding-left: $axis-x * $i;
+        padding-right: $axis-x * $i;
+    }
+    .sl#{$i} {padding-left: $axis-x * $i;}
+    .sr#{$i} {padding-right: $axis-x * $i;}
+}
+@for $i from 1 through 4 {
+    .sy#{$i} {
+        padding-top: $axis-y * $i;
+        padding-bottom: $axis-y * $i;
+    }
+    .st#{$i} { padding-top: $axis-y * $i; }
+    .sb#{$i} { padding-bottom: $axis-y * $i; }
+}
+
+.pd1{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .pd1{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @for $i from 0 through 3 {
+        .mx#{$i} {
+            padding-left: $axis-x * $i;
+            padding-right: $axis-x * $i;
+        }
+    }
+    @for $i from 1 through 4 {
+        .ml#{$i} {padding-left: $axis-x * $i;}
+        .mr#{$i} {padding-right: $axis-x * $i;}
+    }
+    @for $i from 0 through 5 {
+        .my#{$i} {
+            padding-top: $axis-y * $i;
+            padding-bottom: $axis-y * $i;
+        }
+        .mt#{$i} { padding-top: $axis-y * $i; }
+        .mb#{$i} { padding-bottom: $axis-y * $i; }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .pd1{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    @for $i from 0 through 4 {
+        .lx#{$i} {
+            padding-left: $axis-x * $i;
+            padding-right: $axis-x * $i;
+        }
+        .ll#{$i} {padding-left: $axis-x * $i;}
+        .lr#{$i} {padding-right: $axis-x * $i;}
+    }
+    @for $i from 0 through 6 {
+        .ly#{$i} {
+            padding-top: $axis-y * $i;
+            padding-bottom: $axis-y * $i;
+        }
+        .lt#{$i} { padding-top: $axis-y * $i; }
+        .lb#{$i} { padding-bottom: $axis-y * $i; }
+    }
+}

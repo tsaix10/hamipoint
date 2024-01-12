@@ -1,0 +1,48 @@
+sitename: 廣告任務牆
+
+sitetitle: '任務列表'
+
+header:
+  back: 1
+  light_signal: 0
+
+ad_block:
+  - name: 贊助商名稱
+    src: ../images/figure06.jpg
+    url: ''
+  - name: 贊助商名稱
+    src: ../images/figure06.jpg
+    url: ''
+
+mission:
+  title: 觀看兩則廣告可得 Hami point 1點
+  step: |
+    點擊前往活動，輸入驗證碼進入活動
+    等待5秒後點擊廣告頁面
+    點擊網頁中的返回上頁按鈕回到活動
+    等待5秒後點擊廣告頁面
+    點擊網頁中的返回上頁按鈕回到活動
+    點擊"點我取點”，獲得點數按“確認”
+
+
+mission_list:
+  - title: 任務項目標題 任務項目標題 連結至看廣告
+    src: ../images/figure01.jpg
+    url: mission-video.html
+    point: 0.2
+    quota: 80
+  - title: 任務項目標題 任務項目標題 連結至看文章
+    src: ../images/figure02.jpg
+    url: mission-article.html
+    point: 0.1
+    quota: 50
+  - title: 任務項目標題 任務項目標題 連結至看廣告
+    src: ../images/figure03.jpg
+    url: mission-video.html
+    point: 0.2
+    quota: 37
+  - title: 任務項目標題 任務項目標題 連結至看文章
+    src: ../images/figure04.jpg
+    url: mission-article.html
+    point: 0.1
+    quota: 5

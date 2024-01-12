@@ -1,0 +1,22 @@
+sitename: 廣告任務牆
+
+sitetitle: '看廣告'
+
+header:
+  back: 0
+  light_signal: 1
+
+ad_block:
+  - name: 贊助商名稱
+    src: ../images/figure06.jpg
+    url: ''
+  - name: 贊助商名稱
+    src: ../images/figure06.jpg
+    url: ''
+
+mission:
+  title: 點擊兩則廣告後，右上角兩黃燈亮起可領取點數。
+  quota: 10
+  url: ''
+  src: https://ad.newaddiscover.com/ad/images//29dffddc90ba2eebb4f089478e562c17.jpg
+  name: 廣告名稱

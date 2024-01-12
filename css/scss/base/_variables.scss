@@ -1,0 +1,20 @@
+//路徑
+$img:'../images/';
+$font:'font/';
+
+//字型
+$font-ms:"微軟正黑體修正", "微軟正黑體", "Microsoft JhengHei", "MHei", "STHeitiTC-Light", sans-serif;
+$font-base:$font-ms, Arial, Helvetica, "Helvetica Neue", Tahoma, Verdana;
+
+//color
+$color1:#F7AC35;
+$color2:#3F9B38;
+$color3:#119FA8;
+
+//logo寬度
+$logo_m: 300px;       //手機時的寬
+$logo_pc: 260px;      //電腦時的寬
+
+//header高度(header不疊在banner上時需要設的)
+$header_m: 55px;      //手機時的高度
+$header_pc: 100px;        //電腦時的高度

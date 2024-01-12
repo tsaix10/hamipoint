@@ -1,0 +1,66 @@
+html, body {height:100%;}
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    word-wrap: break-word;
+    background: #dedede;
+    color: #888;
+}
+html, *, *:before, *:after { box-sizing:border-box;}
+*:before, *:after{
+    transition: .3s;
+    pointer-events: none;
+}
+h1, h2, h3, h4, h5, h6{ margin:0;}
+h1, h2, h3, h4, h5, h6 { line-height: 1.5;}
+a, button{
+    outline:0 none;
+    color:inherit;
+    backface-visibility: hidden;
+    transition: all .3s;
+}
+a{text-decoration:none;}
+button{cursor: pointer;}
+picture{display: block;}
+address{font-style: normal;}
+
+
+//class
+.figure{
+    position: relative;
+    img{display: block; margin: 0 auto;}
+    &.h100p{overflow: hidden;}
+}
+.fjcs{justify-content: flex-start;}
+.fjce{justify-content: flex-end;}
+.fjcc{justify-content: center;}
+.fjcsb{justify-content: space-between;}
+.fjcsa{justify-content: space-around;}
+.faic{align-items: center;}
+.fais{align-items: flex-start;}
+.faie{align-items: flex-end;}
+.bg-cover { @include bg(cover); }
+.bg-contain { @include bg(contain); }
+.tl { text-align: left; }
+.tc { text-align: center; }
+.tr { text-align: right; }
+.fw3{font-weight: 300;}
+.fw4{font-weight: 400;}
+.fw5{font-weight: 500;}
+.fw7{font-weight: 700;}
+.nowrap{white-space: nowrap;}
+.c0{color: #000;}
+.c4{color: #444;}
+.c5{color: #555;}
+.c6{color: #666;}
+.c7{color: #777;}
+.c8{color: #888;}
+.c9{color: #999;}
+.cb{color: #bbb;}
+.ca{color: #aaa;}
+.cf{color: #fff;}
+.color1{color: $color1;}
+.color2{color: $color2;}
+.color3{color: $color3;}
+
+
+@media screen and (min-width: 768px) {}

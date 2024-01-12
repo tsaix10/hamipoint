@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ Meta|raw }}
+    <title>{{ sitetitle }} - {{ sitename }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">    
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+</head>
+<body>
+<div id="container">
+    <div class="prompt row fjcc faic fs24 cf">
+        向下滑動到底，秒數開始倒數
+    </div>
+    <main id="content">
+        <div class="mission-article c0 sy2 my3 ly4">
+            <article class="w10 pd1">
+                <h1>Lorem Ipsum</h1>
+                <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+                <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+                <br>
+                <hr>
+                <br>
+                <h2>What is Lorem Ipsum?</h2>
+                <p>
+                <strong>Lorem Ipsum</strong>
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <br>
+                <h2>Why do we use it?</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <br>
+                <h2>Where does it come from?</h2>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                <br>
+                <h2>Where can I get some?</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+            </article>
+        </div>
+    </main>
+    <div class="prompt row fjcc faic fs1820 cf">
+        <div id="countdown" class="row fjcc faic">
+            <div class="row fjcc faic">
+                <div>等倒數結束方可點擊按鈕獲取點數：</div>
+                <div class="row fjcc faic">
+                    剩餘<strong class="timer fs30">10</strong>秒
+                </div>
+            </div>
+        </div>
+        <a class="btn02 fw7 fs1820" href="mission-list.html" title="點我取點並返回">點我取點並返回</a>
+    </div>
+</div>
+<script>
+    function startCountdown(elementId) {
+        var countdown = document.getElementById(elementId);
+
+        var countdownInterval = setInterval(function () {
+            countdown.querySelector('.timer').textContent--;
+
+            if (countdown.querySelector('.timer').textContent == 0) {
+                clearInterval(countdownInterval);
+                hideElement(elementId);
+            }
+        }, 1000);
+    }
+
+    function hideElement(elementId) {
+        document.getElementById(elementId).style.display = 'none';
+    }
+
+    // 啟動倒數計時器，參數為要顯示倒數的元素的 ID
+    startCountdown('countdown');
+</script>
+</body>
+</html>

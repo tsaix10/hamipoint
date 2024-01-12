@@ -1,0 +1,83 @@
+@mixin font-size($num: 14) {
+    $base:0.625;
+    font-size: $num + px;
+    font-size: ($num * $base / 10) + rem;
+}
+@mixin font($font-size01, $font-size02:$font-size01, $font-size03:$font-size02) {
+    @include font-size($font-size01);
+    @if ($font-size01 != $font-size02) {
+       @media screen and (min-width: 768px){
+           @include font-size($font-size02);
+        }
+    }
+    @if ($font-size02 != $font-size03) {
+       @media screen and (min-width: 1200px){
+           @include font-size($font-size03);
+        }
+    }
+}
+//行數限制
+@mixin ellipsis ($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+//背景
+@mixin bg($bgsz){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $bgsz;
+}
+//偽元素
+@mixin fake-b($fake-b-w:null, $fake-b-h:null) {
+    content:'';
+    display: block;
+    width: $fake-b-w;
+    height: $fake-b-h;
+}
+@mixin fake-ib($fake-ib-w:null, $fake-ib-h:null) {
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+    width: $fake-ib-w;
+    height: $fake-ib-h;
+    line-height: 1;
+    @include bg(contain);
+}
+//絕對居中
+@mixin abs(){
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;    
+}
+//水平居中
+@mixin abs-x($abs-t:null, $abs-b:null){
+    position: absolute;
+    top:$abs-t;
+    bottom:$abs-b;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1;
+}
+//垂直居中
+@mixin abs-y($abs-l:null, $abs-r:null){
+    position: absolute;
+    left:$abs-l;
+    right:$abs-r;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 1;
+}
+//圖片hover
+@mixin img-hover{
+    .figure{overflow: hidden;}
+    .pic{transition: 1s;}
+    @media screen and (min-width: 769px) {
+        &:hover{
+            .pic{transform: translate(-50%,-50%) scale(1.1);}
+        }
+    }
+}

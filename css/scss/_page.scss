@@ -1,0 +1,90 @@
+/** template */
+.r1020{
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ig01{
+    margin: -10px;
+    >div{padding: 10px;}
+}
+
+//廣告任務牆 index
+.mission-wall{
+    .item{padding: 0 0 30px;}
+    .item-inner{box-shadow: 0 0 5px rgba(#000,.1);}
+    .node-mobile{width: 100%;}
+    .title{padding: 0 0 10px;}
+    .item-main{padding: 25px 20px 20px 25px;}
+    .figure{
+        width: 80px;
+        height: auto;
+    }
+    .text{
+        width: calc(100% - 80px);
+        padding-left: 20px;
+    }
+    .desc{padding-bottom: 8px;}
+    .tg-content{
+        display: none;
+        padding: 20px 25px;
+    }
+    .on{
+        .tg-content{display: block;}
+    }
+}
+
+// 看廣告 mission-video
+.circle{
+    width: 24px; height: 24px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 8px;
+    &.on{
+        background: $color1;
+    }
+}
+.miission-clik{
+    img{width: 100%;}
+}
+
+//倒數提示 mission-video, mission-article
+.prompt{
+    background: $color2;
+    position: relative;
+    min-height: 70px;
+    .btn02{line-height: 42px;}
+}
+#countdown{    
+    background: $color2;
+    @include abs();
+    width: 100%; height: 100%;
+    min-height: 70px;
+}
+.timer{padding: 0 10px;}
+#content+.prompt{min-height: 100px;}
+
+@media screen and (min-width: 1024px) {
+    .r1020{border-radius: 20px;}
+    .ig02{
+        .item-inner{padding: 30px 40px;}
+        .item-main{
+            padding: 0;
+            align-items: center;
+        }
+        .figure{width: 140px;}
+        .text{
+            width: calc(100% - 140px);
+            padding-left: 30px;
+        }
+        .desc{padding-bottom: 15px;}
+        .tg-content{
+            display: none;
+            padding: 20px 0 0;
+        }
+    }
+}
+
+//hover
+@media (hover: hover){
+}

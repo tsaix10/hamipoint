@@ -1,0 +1,54 @@
+{% extends '_layout.twig' %}
+{% block main %}
+    <div class="mission-video pd1 sy1">
+        <div class="w08 r1020 pd1 sy2 my3">
+            <h1 class="tc fs1820 fw5 c0 sb05">{{ mission.title }}</h1>
+            <div class="row fjcc faic tc sb1 mt1 mb2">
+                <span>今日剩餘&nbsp;&nbsp;</span>
+                <strong class="fs30 color2">{{ mission.quota }}</strong>
+                <span>&nbsp;&nbsp;名額</span>
+            </div>
+            <div class="miission-clik r1020 w04">
+                <div class="prompt row fjcc faic cf">
+                    <div id="countdown" class="row fjcc faic">
+                        <div class="row fjcc faic">
+                            <div>等倒數結束方可點擊廣告：</div>
+                            <div class="row fjcc faic">
+                                剩餘<strong class="timer fs24">3</strong>秒
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fs1820">請點擊下方有興趣廣告</div>
+                </div>
+                <div class="figure">
+                    <a href="{{ mission.url }}" title="{{ mission.name }}">
+                        <img src="{{ mission.src }}" alt="{{ mission.name }}" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts_for_body %}
+    <script>
+        function startCountdown(elementId) {
+            var countdown = document.getElementById(elementId);
+
+            var countdownInterval = setInterval(function () {
+                countdown.querySelector('.timer').textContent--;
+
+                if (countdown.querySelector('.timer').textContent == 0) {
+                    clearInterval(countdownInterval);
+                    hideElement(elementId);
+                }
+            }, 1000);
+        }
+
+        function hideElement(elementId) {
+            document.getElementById(elementId).style.display = 'none';
+        }
+
+        // 啟動倒數計時器，參數為要顯示倒數的元素的 ID
+        startCountdown('countdown');
+    </script>
+{% endblock %}
