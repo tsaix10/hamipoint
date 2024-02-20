@@ -12,7 +12,7 @@ ad_block:
     url: ''
 
 mission_list:
-  - title: 無任務列表-觀看兩則廣告可得Hami point 1點
+  - title: 無任務列表-每觀看1則廣告可得Hami point 0.2點
     src: ../images/figure01.jpg
     desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
     url: mission-video.html
@@ -26,7 +26,7 @@ mission_list:
       點擊網頁中的返回上頁按鈕回到活動
       點擊"點我取點”，獲得點數按“確認”
       
-  - title: 當任務已完成-無任務列表-觀看兩則廣告可得Hami point 1點
+  - title: 當任務已完成-無任務列表-每觀看1則廣告可得Hami point 0.2點
     src: ../images/figure01.jpg
     desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
     url: mission-video.html
@@ -63,7 +63,7 @@ mission_list:
       點擊網頁中的返回上頁按鈕回到活動
       等待5秒後點擊廣告頁面
 
-  - title: 觀看兩則廣告可得Hami point 1點
+  - title: 觀看1則廣告可得Hami point 0.2點
     src: ../images/figure04.jpg
     desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
     url: mission-list.html
