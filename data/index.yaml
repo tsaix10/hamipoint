@@ -53,6 +53,8 @@ mission_list:
       點擊網頁中的返回上頁按鈕回到活動
       等待5秒後點擊廣告頁面
 
+  - ad: 1
+
   - title: 無剩餘名額淡化+不可點擊-下載APP，註冊會員
     src: ../images/figure03.jpg
     desc: 下載APP並註冊會員後即可賺取點數
