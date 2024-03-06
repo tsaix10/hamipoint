@@ -7,7 +7,7 @@
                     {% if item.ad %}
                         <div class="item">
                             <div class="tr fs16">贊助商</div>
-                            <a class="figure" href="#" target="_blank" title="贊助商名稱">
+                            <a class="" href="#" target="_blank" title="贊助商名稱">
                                 <img src="../images/figure06.jpg" alt="" loading="lazy">
                             </a>
                         </div>
@@ -28,9 +28,9 @@
                                         <div class="desc fs1416">{{ item.desc }}</div>
                                         <div class="btn-wrap row fjcsb faic">
                                             {% if item.done %}
-                                                <a class="btn btn02 fw7 off" href="{{ item.url }}" title="您已完成此任務">您已完成此任務</a>
+                                                <a class="btn02 fw7 off" href="{{ item.url }}" title="您已完成此任務">您已完成此任務</a>
                                             {% else %}
-                                                <a class="btn btn02 fw7" href="{{ item.url }}" title="點我前往完成任務">點我前往完成任務</a>
+                                                <a class="btn02 fw7" href="{{ item.url }}" title="點我前往完成任務">點我前往完成任務</a>
                                             {% endif %}
                                             {% if item.show_quota %}
                                                 <div class="node-pc" data-child="dyn-quota{{ loop.index }}"></div>

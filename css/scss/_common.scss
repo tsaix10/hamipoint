@@ -27,7 +27,8 @@ address{font-style: normal;}
 //class
 .figure{
     position: relative;
-    img{display: block; margin: 0 auto;}
+    &, img{display: block;}
+    img{margin: 0 auto;}
     &.h100p{overflow: hidden;}
 }
 .fjcs{justify-content: flex-start;}

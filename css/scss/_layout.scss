@@ -86,6 +86,10 @@
 
 //hover
 @media (hover: hover) {
+    #logo:hover{
+        color: #000;
+        text-decoration: none;
+    }
     .path{
         padding: 15px 20px 0;
         a:hover{

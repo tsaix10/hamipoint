@@ -180,7 +180,11 @@ $fontsize:(12,14,16,18,24,30);
 
 @media (hover: hover){
     .btn01, .btn02, .btn04{
-        &:hover{transform: scale(0.95);}
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+            transform: scale(0.95);
+        }
     }
     .tb02{
         tr:not(.off):hover{
