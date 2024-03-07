@@ -20,15 +20,15 @@
     <header id="header" class="header pd1">
         <div class="hd-inner w08 row fjcsb faic">
             <a id="logo" class="fs1820 fw7 c5" href="index.html" title="廣告任務牆">廣告任務牆</a>
-            {% if header.back %}
-                <a class="btn01 fs14" href="https://hamipoint.cht.com.tw/mission" title="返回任務中心">返回任務中心</a>
-            {% endif %}
             {% if header.light_signal %}
                 <div class="light-signal row">
                     <!-- 黃燈加class="on" -->
                     <div class="circle {% if header.ad_number >= 1 %}on{% endif %}"></div>
                     <div class="circle {% if header.ad_number >= 2 %}on{% endif %}"></div>
                 </div>
+            {% endif %}
+            {% if header.back %}
+                <a class="btn01 fs14" href="https://hamipoint.cht.com.tw/mission" title="返回任務中心">返回任務中心</a>
             {% endif %}
         </div>
     </header>

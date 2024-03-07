@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+<style type="text/css">
+	.icon{
+		fill:none;
+		stroke:#000;
+		stroke-width:6;
+		stroke-linecap:round;
+		}
+</style>
+<line class="icon" x1="3" y1="3" x2="27" y2="27"/>
+<line class="icon" x1="27" y1="3" x2="3" y2="27"/>
+</svg>

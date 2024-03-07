@@ -8,20 +8,20 @@
                 <strong class="fs30 color2">{{ mission.quota }}</strong>
                 <span>&nbsp;&nbsp;名額</span>
             </div>
-            <div class="miission-clik r1020 w04">
+            <div class="miission-box r1020 w04">
                 <div class="prompt row fjcc faic cf">
                     <div id="countdown" class="row fjcc faic">
                         <div class="row fjcc faic">
                             <div>等倒數結束方可點擊廣告：</div>
                             <div class="row fjcc faic">
-                                剩餘<strong class="timer fs24">5</strong>秒
+                                剩餘<strong class="timer fs24">3</strong>秒
                             </div>
                         </div>
                     </div>
                     <div class="fs1820">請點擊下方有興趣廣告</div>
                 </div>
-                <div class="figure">
-                    <a class="off" href="mission-video-ok.html" title="{{ mission.name }}">
+                <div class="miission-clik off">
+                    <a  href="mission-video-ok.html" title="{{ mission.name }}">
                         <img src="{{ mission.src }}" alt="{{ mission.name }}" loading="lazy">
                     </a>
                 </div>
@@ -33,16 +33,10 @@
     <script>
         function hideElement(element) {
             element.style.display = 'none';
-
-            // 移除class="off"
-            var adLink = element.querySelector('.figure a.off');
-            if (adLink) {
-                adLink.classList.remove('off');
-            }
         }
 
         function removeOff() {
-            var adLink = document.querySelector('.miission-clik a.off');
+            var adLink = document.querySelector('.miission-clik.off');
             if (adLink) {
                 adLink.classList.remove('off');
             }

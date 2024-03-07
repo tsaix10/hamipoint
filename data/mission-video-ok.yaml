@@ -3,7 +3,7 @@ sitename: Hami Point
 sitetitle: '完成任務'
 
 header:
-  back: 0
+  back: 1
   light_signal: 1
   ad_number: 2
 

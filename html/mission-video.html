@@ -21,12 +21,14 @@
         <div class="hd-inner w08 row fjcsb faic">
             <a id="logo" class="fs1820 fw7 c5" href="index.html" title="廣告任務牆">廣告任務牆</a>
             
-            
                 <div class="light-signal row">
                     <!-- 黃燈加class="on" -->
                     <div class="circle on"></div>
                     <div class="circle "></div>
                 </div>
+            
+            
+                <a class="btn01 fs14" href="https://hamipoint.cht.com.tw/mission" title="返回任務中心">返回任務中心</a>
             
         </div>
     </header>
@@ -34,26 +36,26 @@
         
     <div class="mission-video pd1 sy1">
         <div class="w08 r1020 pd1 sy2 my3">
-            <h1 class="tc fs1820 fw5 c0 sb05">點擊兩則廣告後，右上角兩黃燈亮起可領取點數。</h1>
+            <h1 class="tc fs1820 fw5 c0 sb05">點擊兩則廣告後，上方兩黃燈亮起可領取點數。</h1>
             <div class="row fjcc faic tc sb1 mt1 mb2">
                 <span>今日剩餘&nbsp;&nbsp;</span>
                 <strong class="fs30 color2">10</strong>
                 <span>&nbsp;&nbsp;名額</span>
             </div>
-            <div class="miission-clik r1020 w04">
+            <div class="miission-box r1020 w04">
                 <div class="prompt row fjcc faic cf">
                     <div id="countdown" class="row fjcc faic">
                         <div class="row fjcc faic">
                             <div>等倒數結束方可點擊廣告：</div>
                             <div class="row fjcc faic">
-                                剩餘<strong class="timer fs24">5</strong>秒
+                                剩餘<strong class="timer fs24">3</strong>秒
                             </div>
                         </div>
                     </div>
                     <div class="fs1820">請點擊下方有興趣廣告</div>
                 </div>
-                <div class="figure">
-                    <a class="off" href="mission-video-ok.html" title="廣告名稱">
+                <div class="miission-clik off">
+                    <a  href="mission-video-ok.html" title="廣告名稱">
                         <img src="https://ad.newaddiscover.com/ad/images//29dffddc90ba2eebb4f089478e562c17.jpg" alt="廣告名稱" loading="lazy">
                     </a>
                 </div>
@@ -136,16 +138,10 @@
     <script>
         function hideElement(element) {
             element.style.display = 'none';
-
-            // 移除class="off"
-            var adLink = element.querySelector('.figure a.off');
-            if (adLink) {
-                adLink.classList.remove('off');
-            }
         }
 
         function removeOff() {
-            var adLink = document.querySelector('.miission-clik a.off');
+            var adLink = document.querySelector('.miission-clik.off');
             if (adLink) {
                 adLink.classList.remove('off');
             }

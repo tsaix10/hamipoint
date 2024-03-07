@@ -61,20 +61,18 @@
     }
 }
 .miission-clik{
-    img{width: 100%;}
-    .figure a{
-        display: block;
-        position: relative;
-        overflow: hidden;
-    }
-    .off{
+    &.off{
         pointer-events: none;
+        position: relative;
         &::before{
             @include fake-b(101%,101%);
             background: rgba(#555,.7);
             @include abs();
         }
     }
+    a, img{display: block;}
+    &, a{overflow: hidden;}
+    img{width: 100%;}
 }
 
 //看文章 mission-article

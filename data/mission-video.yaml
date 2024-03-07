@@ -3,7 +3,7 @@ sitename: Hami Point
 sitetitle: '任務中(看廣告)'
 
 header:
-  back: 0
+  back: 1
   light_signal: 1
   ad_number: 1
 
@@ -16,7 +16,7 @@ ad_block:
     url: ''
 
 mission:
-  title: 點擊兩則廣告後，右上角兩黃燈亮起可領取點數。
+  title: 點擊兩則廣告後，上方兩黃燈亮起可領取點數。
   quota: 10
   url: ''
   src: https://ad.newaddiscover.com/ad/images//29dffddc90ba2eebb4f089478e562c17.jpg
