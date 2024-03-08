@@ -21,3 +21,8 @@ mission:
   url: ''
   src: https://ad.newaddiscover.com/ad/images//29dffddc90ba2eebb4f089478e562c17.jpg
   name: 廣告名稱
+
+sw01:
+  - src: https://adc.tamedia.com.tw/rmadp/cf3/24072/10/1/img/MTUyNDZjMz.jpg
+  - src: https://adc.tamedia.com.tw/rmadp/cf3/24072/10/1/img/MTUyNDZjMz.jpg
+  - src: https://adc.tamedia.com.tw/rmadp/cf3/24072/10/1/img/MTUyNDZjMz.jpg

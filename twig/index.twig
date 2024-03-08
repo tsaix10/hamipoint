@@ -66,5 +66,17 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="ad-block pd1 sb3 lt1 lb5">
+            <div class="ig01 row w08">
+                {% for item in ad_block %}
+                    <div class="item col-12 col-md">
+                        <div class="tr fs16">贊助商</div>
+                        <a class="figure" href="{{ item.url }}" title="{{ item.name }}">
+                            <img src="{{ item.src }}" alt="" loading="lazy">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}

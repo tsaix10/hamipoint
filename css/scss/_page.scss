@@ -9,6 +9,13 @@
     >div{padding: 10px;}
 }
 
+//所有的廣告容器
+.miission-clik, .ad-block, .kv{
+    a, img{display: block;}
+    &, a{overflow: hidden;}
+    img{width: 100%;}
+}
+
 //廣告任務牆 index
 .mission-wall{
     .item{
@@ -70,9 +77,6 @@
             @include abs();
         }
     }
-    a, img{display: block;}
-    &, a{overflow: hidden;}
-    img{width: 100%;}
 }
 
 //看文章 mission-article
@@ -94,6 +98,35 @@
 .timer{padding: 0 10px;}
 #content+.prompt{min-height: 100px;}
 
+//輪播
+.sw01{
+    .swiper-slide{width: 100%;}
+}
+.swiper-pagination-bullet{
+    background: #ccc;
+    &.on{background: $color2;}
+}
+.v-desktop{display: none;}
+
+@media screen and (min-width: 480px) {
+    .sw01{
+        margin: 0 -10px;
+        .swiper-slide{
+            width: 50%;
+            padding: 0 10px;
+        }
+    }
+}
+@media screen and (min-width: 900px) {
+    .sw01{
+        .swiper-slide{width: 33.333%;}
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .v-mobile{display: none;}
+    .v-desktop{display: block;}
+}
 @media screen and (min-width: 1024px) {
     .r1020{border-radius: 20px;}
     .mission-wall{

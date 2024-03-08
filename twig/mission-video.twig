@@ -1,6 +1,25 @@
 {% extends '_layout.twig' %}
 {% block main %}
-    <div class="mission-video pd1 sy1">
+    <div class="mission-video pd1">
+        <div class="w08 sb1">
+            <div class="kv r1020">
+                <div class="v-desktop">
+                    <!-- size原970*250 → 若維持目前800px寬, 則等比縮放後新尺寸為800*206px -->
+                    <div id='div-gpt-ad'>
+                        <a href="#" title="">
+                            <img src="../images/figure08.jpg" alt="" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="v-mobile">
+                    <div id='div-gpt-ad-'>
+                        <a href="#" title="">
+                            <img src="../images/figure07.jpg" alt="" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="w08 r1020 pd1 sy2 my3">
             <h1 class="tc fs1820 fw5 c0 sb05">{{ mission.title }}</h1>
             <div class="row fjcc faic tc sb1 mt1 mb2">
@@ -27,18 +46,43 @@
                 </div>
             </div>
         </div>
+        <div class="ad-block st1 sb2 lt1 lb3">
+            <div class="w08">
+                <div class="tr fs16">贊助商</div>
+                <div class="swiper-sec sw01">
+                    <div class="swiper">
+                        <div class="swiper-wrapper sb2">
+                            {% for item in sw01 %}
+                                <div class="swiper-slide">
+                                    <div class="slide-inner r1020 miission-clik off">
+                                        <a id="" target="_new" href="#">
+                                            <img id="picture" src="{{ item.src }}">
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination row fjcc"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 {% block scripts_for_body %}
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
+        //時間倒數
         function hideElement(element) {
             element.style.display = 'none';
         }
 
         function removeOff() {
-            var adLink = document.querySelector('.miission-clik.off');
+            var adLink = document.querySelectorAll('.miission-clik.off');
             if (adLink) {
-                adLink.classList.remove('off');
+                for (var i = 0; i < adLink.length; i++) {
+                    adLink[i].classList.remove('off');
+                }
             }
         }
 
@@ -59,5 +103,17 @@
 
         startCountdown('countdown');
 
+        //下方輪播的廣告圖
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper1 = new Swiper('.sw01 .swiper', {
+                slidesPerView: 'auto',
+                roundLengths : true,
+                pagination: {
+                    el: '.sw01 .swiper-pagination',
+                    clickable: true,
+                    bulletActiveClass: 'on',
+                },
+            });
+        });
     </script>
 {% endblock %}

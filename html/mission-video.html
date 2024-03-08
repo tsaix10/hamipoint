@@ -34,7 +34,26 @@
     </header>
     <main id="content">
         
-    <div class="mission-video pd1 sy1">
+    <div class="mission-video pd1">
+        <div class="w08 sb1">
+            <div class="kv r1020">
+                <div class="v-desktop">
+                    <!-- size原970*250 → 若維持目前800px寬, 則等比縮放後新尺寸為800*206px -->
+                    <div id='div-gpt-ad'>
+                        <a href="#" title="">
+                            <img src="../images/figure08.jpg" alt="" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="v-mobile">
+                    <div id='div-gpt-ad-'>
+                        <a href="#" title="">
+                            <img src="../images/figure07.jpg" alt="" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="w08 r1020 pd1 sy2 my3">
             <h1 class="tc fs1820 fw5 c0 sb05">點擊兩則廣告後，上方兩黃燈亮起可領取點數。</h1>
             <div class="row fjcc faic tc sb1 mt1 mb2">
@@ -61,29 +80,45 @@
                 </div>
             </div>
         </div>
-    </div>
-
-        
-            <div class="ad-block pd1 sb3 lt1 lb5">
-                <div class="ig01 row w08">
-                    
-                        <div class="item col-12 col-md">
-                            <div class="tr fs16">贊助商</div>
-                            <a class="figure" href="" title="贊助商名稱">
-                                <img src="../images/figure06.jpg" alt="" loading="lazy">
-                            </a>
+        <div class="ad-block st1 sb2 lt1 lb3">
+            <div class="w08">
+                <div class="tr fs16">贊助商</div>
+                <div class="swiper-sec sw01">
+                    <div class="swiper">
+                        <div class="swiper-wrapper sb2">
+                            
+                                <div class="swiper-slide">
+                                    <div class="slide-inner r1020 miission-clik off">
+                                        <a id="" target="_new" href="#">
+                                            <img id="picture" src="https://adc.tamedia.com.tw/rmadp/cf3/24072/10/1/img/MTUyNDZjMz.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="swiper-slide">
+                                    <div class="slide-inner r1020 miission-clik off">
+                                        <a id="" target="_new" href="#">
+                                            <img id="picture" src="https://adc.tamedia.com.tw/rmadp/cf3/24072/10/1/img/MTUyNDZjMz.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="swiper-slide">
+                                    <div class="slide-inner r1020 miission-clik off">
+                                        <a id="" target="_new" href="#">
+                                            <img id="picture" src="https://adc.tamedia.com.tw/rmadp/cf3/24072/10/1/img/MTUyNDZjMz.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                            
                         </div>
-                    
-                        <div class="item col-12 col-md">
-                            <div class="tr fs16">贊助商</div>
-                            <a class="figure" href="" title="贊助商名稱">
-                                <img src="../images/figure06.jpg" alt="" loading="lazy">
-                            </a>
-                        </div>
-                    
+                        <div class="swiper-pagination row fjcc"></div>
+                    </div>
                 </div>
             </div>
-                
+        </div>
+    </div>
+
     </main>
     <div id="gdpr">
         <div class="row faic fs1214">
@@ -135,15 +170,19 @@
     }
 </script>
 
+    <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
     <script>
+        //時間倒數
         function hideElement(element) {
             element.style.display = 'none';
         }
 
         function removeOff() {
-            var adLink = document.querySelector('.miission-clik.off');
+            var adLink = document.querySelectorAll('.miission-clik.off');
             if (adLink) {
-                adLink.classList.remove('off');
+                for (var i = 0; i < adLink.length; i++) {
+                    adLink[i].classList.remove('off');
+                }
             }
         }
 
@@ -164,6 +203,18 @@
 
         startCountdown('countdown');
 
+        //下方輪播的廣告圖
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper1 = new Swiper('.sw01 .swiper', {
+                slidesPerView: 'auto',
+                roundLengths : true,
+                pagination: {
+                    el: '.sw01 .swiper-pagination',
+                    clickable: true,
+                    bulletActiveClass: 'on',
+                },
+            });
+        });
     </script>
 
 
