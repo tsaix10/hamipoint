@@ -91,6 +91,7 @@ $fontsize:(12,14,16,18,24,30);
         margin: 10px 0;
         overflow: hidden;
     }
+    th{text-align: center;}
     .td-link{
         width: 100%;
         &::before{display: none;}
