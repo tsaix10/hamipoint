@@ -1,0 +1,16 @@
+sitename: Hami Point
+
+sitetitle: '完成任務'
+
+header:
+  back: 1
+  light_signal: 0
+  ad_number: 2
+
+ad_block:
+  - name: 贊助商名稱
+    src: ../images/figure06.jpg
+    url: ''
+  - name: 贊助商名稱
+    src: ../images/figure06.jpg
+    url: ''

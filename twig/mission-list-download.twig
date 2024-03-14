@@ -1,0 +1,55 @@
+{% extends '_layout.twig' %}
+{% block main %}
+    <div class="mission-list pd1 sy1">
+        <div class="w08 r1020 pd1 sy2 mb3 lb4">
+            <h1 class="tc fs1820 fw5 c0">{{ mission.title }}</h1>
+            <div class="list list01 row fjcc sy1 mb2">
+                <ol class="fs1416 fw4">
+                    {% for line in mission.step|nl2br|split('\n') %}
+                        {% if line|trim is not empty %}
+                            <li>{{ line|trim }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="get-point ig01 row fjcc faic tc sb2">
+                <div class="text fs1618 color1 fw5">目前已累積 Hami point __點</div>
+                <div class="btn-wrap">
+                    <a class="btn02 fw7" href="#" title="點我取點">點我取點</a>
+                </div>
+                <!-- 任務未完成時加class:off -->
+                <div class="btn-wrap">
+                    <a class="btn02 fw7 off" href="#" title="點我取點(待完成任務)">點我取點(待完成任務)</a>
+                </div>
+            </div>
+            <div class="tb-wrap tb02 tb-js fw4 c5">
+                <table>
+                    <thead>
+                        <tr class="fs14">
+                            <th>選項標題</th>
+                            <th>Hami point</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in mission_list %}
+                        <!-- 名額為0時加class:off -->
+                        <tr {% if item.quota < 1 %}class="off"{% endif %}>
+                            <td class="td-link">
+                                <div class="item row faic">
+                                    <a class="figure" href="{{ item.url }}">
+                                        <img src="{{ item.src }}" width="50" height="50" alt="" loading="lazy">
+                                    </a>
+                                    <a class="col tl title fs1416 c0" href="{{ item.url }}">{{ item.title }}</a>
+                                </div>
+                            </td>
+                            <td class="td-point">
+                                <strong class="fs1820 color1">{{ item.point }}</strong>點
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

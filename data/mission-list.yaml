@@ -34,9 +34,9 @@ mission_list:
     url: mission-article.html
     point: 0.1
     quota: 5
-  - title: 任務項目標題 任務項目標題 連結至下載
-    src: ../images/figure03.jpg
-    url: mission-download.html
+  - title: 任務項目標題 任務項目標題 連結至看文章
+    src: ../images/figure02.jpg
+    url: mission-article.html
     point: 0.2
     quota: 3
   - title: 任務項目標題 任務項目標題 連結至看廣告

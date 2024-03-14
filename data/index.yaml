@@ -26,21 +26,6 @@ mission_list:
       點擊網頁中的返回上頁按鈕回到活動
       點擊"點我取點”，獲得點數按“確認”
       
-  - title: 當任務已完成-無任務列表-每觀看1則廣告可得Hami point 0.2點
-    src: ../images/figure01.jpg
-    desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
-    url: mission-video.html
-    show_quota: 1
-    quota: 9
-    step: |
-      點擊前往活動，輸入驗證碼進入活動
-      等待5秒後點擊廣告頁面
-      點擊網頁中的返回上頁按鈕回到活動
-      等待5秒後點擊廣告頁面
-      點擊網頁中的返回上頁按鈕回到活動
-      點擊"點我取點”，獲得點數按“確認”
-    done: 1
-
   - title: 有任務列表-閱讀文章指定秒數後累計Hami point
     src: ../images/figure02.jpg
     desc: 每天晚上12點更新任務名額
@@ -56,7 +41,7 @@ mission_list:
   - title: 有任務列表-下載APP，註冊會員
     src: ../images/figure03.jpg
     desc: 下載APP並註冊會員後即可賺取點數
-    url: mission-list.html
+    url: mission-list-download.html
     show_quota: 0
     quota: 3
     step: |
@@ -64,6 +49,21 @@ mission_list:
       開啟____APP並註冊會員
       等待審核
       審核通過發放點數
+
+  - title: 當任務已完成-每觀看1則廣告可得Hami point 0.2點
+    src: ../images/figure01.jpg
+    desc: 每天上午6點更新任務名額，並於其他時段不定時增加名額。
+    url: mission-video.html
+    show_quota: 1
+    quota: 9
+    step: |
+      點擊前往活動，輸入驗證碼進入活動
+      等待5秒後點擊廣告頁面
+      點擊網頁中的返回上頁按鈕回到活動
+      等待5秒後點擊廣告頁面
+      點擊網頁中的返回上頁按鈕回到活動
+      點擊"點我取點”，獲得點數按“確認”
+    done: 1
 
   - ad: 1
 
