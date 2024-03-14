@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>完成任務 - Hami Point</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="../css/style.css?v=20240312" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+</head>
+<body>
+<div id="container">
+    <header id="header" class="header pd1">
+        <div class="hd-inner w08 row fjcsb faic">
+            <a id="logo" class="fs1820 fw7 c5" href="index.html" title="廣告任務牆">廣告任務牆</a>
+            
+                <div class="light-signal row">
+                    <!-- 黃燈加class="on" -->
+                    <div class="circle on"></div>
+                    <div class="circle on"></div>
+                </div>
+            
+            
+                <a class="btn01 fs14" href="https://hamipoint.cht.com.tw/mission" title="返回任務中心">返回任務中心</a>
+            
+        </div>
+    </header>
+    <main id="content">
+        
+    <div class="mission-video pd1 sy1">
+        <div class="w08 r1020 pd1 sy2 my3">
+            <div class="figure">
+                <img src="../images/icon-check.svg" width="120" height="120" alt="">
+            </div>
+            <div class="tc pd1 sy1">
+                <h1 class="tc fs2530 fw5 c0 sb1">恭喜您已完成任務流程</h1>
+                <!-- 無任務列表 -->
+                <a class="btn02 fw7" href="index.html" title="點我取點並返回">點我取點並返回(無任務列表,回到任務牆)</a>
+                <!-- 有任務列表 -->
+                <a class="btn02 fw7" href="mission-list.html" title="返回上頁取點">返回上頁取點(回到任務列表)</a>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <div id="gdpr">
+        <div class="row faic fs1214">
+            <div class="col-12 col-md-10 col-lg-11 cf mr1">
+                我們紀錄 cookie 資訊，以提供客製化內容，可優化您的使用體驗，若繼續閱覽本網站內容，即表示您同意我們使用 cookies。
+                更多關於<a class="color3 fw5" href="privacy.html" target="_blank" title="隱私保護資訊，">隱私保護資訊，</a>
+            </div>
+            <div class="col-12 col-md-2 col-lg-1 tc st1 mt0">
+                <button class="btn01 cf" onclick="acceptGDPR()">瞭解</button>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer pd1 sy1">
+        <div class="w09 tc fs1214 fw3 lh16 cf">
+            <div>本任務牆由智慧時尚股份有限公司負責經營服務。本公司保留隨時修改、變更、暫停或終止本活動內容之權利。</div>
+            <div class="row fjcc">
+                <div class="col-12 col-md-auto">
+                    客服信箱：<a href="mailto:service@open-life.com" title="service@open-life.com">service@open-life.com</a>
+                </div>
+                <div class="col-12 col-md-auto sx1">
+                    客服電話：<a href="tel:0277098893" title="02-7709-8893">02-7709-8893</a>
+                </div>
+                <div class="col-12 col-md-auto">
+                    服務時間：週一～五 上午 9:30～12:00 下午 13:30～18:00
+                </div>
+                <div class="col-12">
+                    <a class="color3 fw5" href="https://mission-wall.devsg.openlife.co/service" target="_blank" title="服務規章">服務規章</a>
+                    及
+                    <a class="color3 fw5" href="https://mission-wall.devsg.openlife.co/privacy" target="_blank" title="個人隱私權保護政策">個人隱私權保護政策</a>
+                </div>
+            </div>
+            <div class="fs12">© 2023 Fashion Intelligence Co.,Ltd. All rights reserved.</div>            
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript" src="../js/comm.js"></script>
+<script src="//code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>    
+<script>
+    // GDPR
+    if (!localStorage.getItem('gdprAccepted')) {
+        document.getElementById('gdpr').style.display = 'block';
+    }
+    function acceptGDPR() {
+        document.getElementById('gdpr').style.display = 'none';
+        localStorage.setItem('gdprAccepted', true);
+    }
+</script>
+
+
+</body>
+</html>

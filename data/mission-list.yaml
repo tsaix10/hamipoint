@@ -21,8 +21,7 @@ mission:
     等待5秒後點擊廣告頁面
     點擊網頁中的返回上頁按鈕回到活動
     等待5秒後點擊廣告頁面
-    點擊網頁中的返回上頁按鈕回到活動
-    點擊"點我取點”，獲得點數按“確認”
+    隨任務列表不同這塊秀不同的任務流程
 
 mission_list:
   - title: 任務項目標題 任務項目標題 連結至看廣告
@@ -35,6 +34,11 @@ mission_list:
     url: mission-article.html
     point: 0.1
     quota: 5
+  - title: 任務項目標題 任務項目標題 連結至下載
+    src: ../images/figure03.jpg
+    url: mission-download.html
+    point: 0.2
+    quota: 3
   - title: 任務項目標題 任務項目標題 連結至看廣告
     src: ../images/figure03.jpg
     url: mission-video.html
