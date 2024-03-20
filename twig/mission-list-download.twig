@@ -28,11 +28,11 @@
                         <tr class="fs14">
                             <th>選項標題</th>
                             <th>Hami point</th>
+                            <th>限時區間</th>
                         </tr>
                     </thead>
                     <tbody>
                     {% for item in mission_list %}
-                        <!-- 名額為0時加class:off -->
                         <tr {% if item.quota < 1 %}class="off"{% endif %}>
                             <td class="td-link">
                                 <div class="item row faic">
@@ -45,6 +45,7 @@
                             <td class="td-point">
                                 <strong class="fs1820 color1">{{ item.point }}</strong>點
                             </td>
+                            <td class="td-date">{{ item.date }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
