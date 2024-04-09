@@ -125,6 +125,13 @@ $fontsize:(12,14,16,18,24,30);
     }
 }
 
+.video-wrap{
+    font-size: 0;
+    video, iframe{
+        max-width: 100%;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .tb-wrap{
         .btn-wrap .icon:hover{transform: scale(1.1);}
