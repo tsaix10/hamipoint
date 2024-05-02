@@ -21,6 +21,7 @@ mission:
     開啟____APP並註冊會員
     等待審核
     審核通過發放點數
+  title_done: 審核中，待點數入帳
 
 mission_list:
   - title: 下載APP並註冊會員，即可獲得點數
@@ -42,4 +43,16 @@ mission_list:
     date: 3/20-3/22
     quota: 1
 
-  # - title: 此任務已完成--已完成的任務無法再點擊
+mission_done_list:
+  - title: 下載APP並註冊會員，即可獲得點數
+    src: ../images/figure03.jpg
+    url: mission-download.html
+    point: 0.1
+    date: 3/20-3/25
+    quota: 1
+  - title: 下載APP並註冊會員，即可獲得點數
+    src: ../images/figure03.jpg
+    url: mission-download.html
+    point: 0.2
+    date: 3/20-3/22
+    quota: 1

@@ -51,6 +51,38 @@
                     </tbody>
                 </table>
             </div>
+            <div class="st2">
+                <h2 class="tc fs1820 fw5 c0 mb1">{{ mission.title_done }}</h2>
+                <div class="tb-wrap tb02 tb-js fw4 c5">
+                    <table>
+                        <thead>
+                            <tr class="fs14">
+                                <th>選項標題</th>
+                                <th>Hami point</th>
+                                <th>限時區間</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in mission_done_list %}
+                            <tr class="off">
+                                <td class="td-link">
+                                    <div class="item row faic">
+                                        <a class="figure" href="{{ item.url }}">
+                                            <img src="{{ item.src }}" width="50" height="50" alt="" loading="lazy">
+                                        </a>
+                                        <a class="col tl title fs1416 c0" href="{{ item.url }}">{{ item.title }}</a>
+                                    </div>
+                                </td>
+                                <td class="td-point">
+                                    <strong class="fs1820 color1">{{ item.point }}</strong>點
+                                </td>
+                                <td class="td-date">{{ item.date }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         {% include "_adblock.twig" %}
     </div>
